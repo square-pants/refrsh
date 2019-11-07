@@ -1,0 +1,11 @@
+<view class="list">
+  <view class="dropPage" wx:if="{{refreshState==1||refreshState==0}}">
+    <view class="refreshtype">刷新布局</view>
+  </view>
+  <scroll-view class="scroll" scroll-y="{{isScroll}}" upper-threshold="0" lower-threshold="0" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <slot bindtouchstart="touchStart" bindtouchend="touchEnd"></slot>
+  </scroll-view>
+  <view class="upPage" wx:if="{{refreshState==2||refreshState==0}}">
+    <view class="refreshtype2">翻页布局</view>
+  </view>
+</view>

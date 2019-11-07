@@ -1,0 +1,7 @@
+<refresh id="refresh" bind:loadMore="loadMore" bind:refresh="refresh">
+  <view id="group" class="group">
+    <block wx:for="{{list}}" wx:key="list{{index}}">
+      <view class="layout" bindtap="onSucceed" data-index="{{index}}"></view>
+    </block>
+  </view>
+</refresh>
